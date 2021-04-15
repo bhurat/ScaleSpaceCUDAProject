@@ -1,0 +1,3 @@
+#!/bin/bash
+
+g++ serialscalespace.cpp -o Serialscalespace

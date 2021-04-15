@@ -1,0 +1,3 @@
+#!/bin/bash
+
+g++ serialconv.cpp -Wall -Werror -o Serialconv

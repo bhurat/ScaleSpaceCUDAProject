@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#PBS -V
+#PBS -l walltime=00:01:00
+#PBS -N Mscalespace
+#PBS -j oe
+#PBS -q batch
+cd $PBS_O_WORKDIR
+export LD_LIBRARY_PATH=/usr/local/openmpi-1.8.1/lib:$LD_LIBRARY_PATH
+
+mpirun -np 2 -hostfile ./machines ./Mpicudascalespace
+

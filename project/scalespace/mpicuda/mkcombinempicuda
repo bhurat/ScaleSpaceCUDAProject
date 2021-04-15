@@ -1,0 +1,5 @@
+#!/bin/bash
+mpic++ -c mpiscalespace.cpp -o mpiscalespace.o
+nvcc -arch=sm_20 -c mpicuda.cu -o mpicuda.o
+
+mpic++ mpiscalespace.o mpicuda.o -L/usr/local/cuda-8.0/lib64/ -lcudart -o Combinempicuda
